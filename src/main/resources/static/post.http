@@ -1,0 +1,20 @@
+# curl -i
+#-H "Accept: application/json"
+#-H "Content-Type:application/json"
+#-X POST --data
+#  '{"username": "johnny", "password": "password"}' "https://localhost:8080/.../request"
+POST http://localhost:5500/transfer
+Accept: application/json
+Content-Type: application/json
+
+{
+  "amount": {
+    "currency": "rur",
+    "value": 780
+  },
+  "cardFromNumber": "2222 2222 2222 2222",
+  "cardToNumber": "5555 5555 5555 5555",
+  "cardFromValidTill": "11/21",
+  "cardFromCVV": "060"
+}
+
