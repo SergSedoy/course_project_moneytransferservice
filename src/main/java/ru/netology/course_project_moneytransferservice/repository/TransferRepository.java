@@ -3,6 +3,7 @@ package ru.netology.course_project_moneytransferservice.repository;
 import org.springframework.stereotype.Repository;
 import ru.netology.course_project_moneytransferservice.Card;
 import ru.netology.course_project_moneytransferservice.TransferForm;
+import ru.netology.course_project_moneytransferservice.service.TransferService;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
@@ -21,7 +22,7 @@ public class TransferRepository {
         return list;
     }
 
-    public int getID(TransferForm transferForm) {
+    public int getId(TransferForm transferForm) {
         list.add(transferForm);
         return list.indexOf(transferForm);
     }
@@ -30,15 +31,14 @@ public class TransferRepository {
         return mapa.containsKey(transferForm.getCardFromNumber()) && mapa.containsKey(transferForm.getCardToNumber());
     }
 
-    public Card searchCard(String CardFromNumber) { return mapa.get(CardFromNumber);}
+    public Card searchCard(String cardFromNumber) { return mapa.get(cardFromNumber);}
 
     public double getAmount(Card card) {
     return mapa.get(card.getCardNumber()).getAmount();
     }
 
-    public void setAmount(Card cardTo, double amount) {
-        mapa.get(cardTo.getCardNumber()).setAmount(amount);
-        System.out.println("деньги " + amount + " зачислены на счет карты " + cardTo.getCardNumber());
+    public void setAmount(Card card, double amount) {
+        mapa.get(card.getCardNumber()).setAmount(amount);
     }
 
 

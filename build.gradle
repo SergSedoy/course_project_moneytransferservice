@@ -7,7 +7,8 @@ plugins {
 
 group = 'ru.netology'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+sourceCompatibility=JavaVersion.VERSION_15
+targetCompatibility=JavaVersion.VERSION_15
 
 repositories {
     mavenCentral()
@@ -17,11 +18,19 @@ ext {
     set('testcontainersVersion', "1.15.3")
 }
 
+configurations {
+    all {
+        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+    }
+}
+
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-log4j2'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.testcontainers:junit-jupiter'
+    testImplementation 'org.mockito:mockito-core:3.12.4'
 }
 
 dependencyManagement {

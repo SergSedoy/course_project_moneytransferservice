@@ -10,11 +10,11 @@ Content-Type: application/json
 {
   "amount": {
     "currency": "rur",
-    "value": 780
+    "value": 10000000
   },
-  "cardFromNumber": "2222 2222 2222 2222",
-  "cardToNumber": "5555 5555 5555 5555",
+  "cardFromNumber": "5555555555555555",
+  "cardToNumber": "2222222222222222",
   "cardFromValidTill": "11/21",
-  "cardFromCVV": "060"
+  "cardFromCVV": "123"
 }
 
