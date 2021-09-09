@@ -2,8 +2,8 @@ package ru.netology.course_project_moneytransferservice.service;
 
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
-import ru.netology.course_project_moneytransferservice.Card;
-import ru.netology.course_project_moneytransferservice.TransferForm;
+import ru.netology.course_project_moneytransferservice.pojo.Card;
+import ru.netology.course_project_moneytransferservice.pojo.TransferForm;
 import ru.netology.course_project_moneytransferservice.repository.TransferRepository;
 
 import java.util.ArrayList;

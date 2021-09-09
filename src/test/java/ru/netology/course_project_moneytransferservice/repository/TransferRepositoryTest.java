@@ -2,7 +2,7 @@ package ru.netology.course_project_moneytransferservice.repository;
 
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
-import ru.netology.course_project_moneytransferservice.Card;
+import ru.netology.course_project_moneytransferservice.pojo.Card;
 
 import static org.junit.jupiter.api.Assertions.*;
 

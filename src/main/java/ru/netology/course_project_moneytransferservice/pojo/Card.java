@@ -1,4 +1,4 @@
-package ru.netology.course_project_moneytransferservice;
+package ru.netology.course_project_moneytransferservice.pojo;
 
 import java.util.Objects;
 

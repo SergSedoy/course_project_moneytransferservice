@@ -1,4 +1,4 @@
-package ru.netology.course_project_moneytransferservice;
+package ru.netology.course_project_moneytransferservice.pojo;
 
 public class BaseResponse {
     private final String operationId;
